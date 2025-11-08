@@ -1,5 +1,7 @@
 # VueJs
-
+- Basic
+  - [Creating first project](#creating-first-project)
+  - [Ref vs Reactive](#ref-vs-reactive)
 
 ## Creating first project
 - run command ```npm create vite@latest vue-proj1``` and then select Vue frameworks and finally select java script.
@@ -10,5 +12,11 @@
   
   ```
   - Extensions to use
-     - Bracket view colorization
+     - Bracket view colorization togler
      - Live server
+## Ref vs Reactive
+- ref we use with primitive type however reactive we use with object. ref we can use with both primitive and object but reactive can not be used with primitive
+  ```
+  access ref object
+  employees=ref({name:'rakesh'})  employees[0].value.name    this way we can access ref object
+  ```
