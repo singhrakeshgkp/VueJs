@@ -3,6 +3,8 @@
   - [Creating first project](#creating-first-project)
   - [Ref vs Reactive](#ref-vs-reactive)
   - [Directive](#directive)
+  - [Style](#style)
+  - [Event](#event)
 
 ## Creating first project
 - run command ```npm create vite@latest vue-proj1``` and then select Vue frameworks and finally select java script.
@@ -27,4 +29,9 @@
 - **v-once**--> display variable content only once, even if variable value gets change dynamically that change will not refelect on the DOM where its applied.
 - **v-bind**/ : --> bind variale (variable having url as content) to the element. v-bind shorthand is :(colon)
 - **v-show**--> to show or hide
-- **v-if**--> 
+- **v-if**-->
+
+## Style
+## Event
+- click
+- event modifier
