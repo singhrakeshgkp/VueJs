@@ -5,6 +5,7 @@
   - [Directive](#directive)
   - [Style](#style)
   - [Event](#event)
+  - [Data binding](#data-binding)
 
 ## Creating first project
 - run command ```npm create vite@latest vue-proj1``` and then select Vue frameworks and finally select java script.
@@ -35,3 +36,11 @@
 ## Event
 - click
 - event modifier
+
+## Data binding
+- two way binding
+- model modifier
+   - v-model -->used for binding
+   - v-model.trim---> if used with input, it will remove all spaces from text box.
+   - v-model.lazy---> will apply binding changes once focus is out. for ex if we are typing in text box and deplaying that value in <p> tag, changes in p tag will happens once focus is out from input box
+   - v-model.number---> make sure we are typing number
