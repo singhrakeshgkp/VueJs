@@ -39,7 +39,12 @@
 - **display multiple elements if a condition met true**-->we can achieve this in two way
   - wrapping those element in another div tag
   - using template, this one is recomended as it will not introduce additional unnecessary div tag.
-- v-show ---> used to show or hide elements (internally it uses display: nons css prop). the diff between v-if and v-show is v-if element will not be present  in DOM if condition does not meet, however element with v-show will be present in DOM with display:none prop.
+- **v-show** ---> used to show or hide elements (internally it uses display: nons css prop). the diff between v-if and v-show is v-if element will not be present  in DOM if condition does not meet, however element with v-show will be present in DOM with display:none prop.
+
+## List Rendering
+### Fine name 03-list-rendering-ex1.html
+- display an array
+- 
 ## Style
 ## Event
 - click
