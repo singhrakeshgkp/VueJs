@@ -25,13 +25,20 @@
   employees=ref({name:'rakesh'})  employees[0].value.name    this way we can access ref object
   ```
 
-## Directive
-- **v-html**--> transform in html.
+## Directive (binding)
+#### file name 01-directive-ex1.html
+- **v-html**--> transform in html. 
 - **v-once**--> display variable content only once, even if variable value gets change dynamically that change will not refelect on the DOM where its applied.
-- **v-bind**/ : --> bind variale (variable having url as content) to the element. v-bind shorthand is :(colon)
+- **v-bind**/ : --> bind variale (variable having url as content) to the element. v-bind shorthand is :(colon), we can bind inline css, css class....etc
 - **v-show**--> to show or hide
-- **v-if**-->
 
+## Conditional rendering
+#### file name 02-conditional-rendering-ex1.html
+- if else  --> task is to display given num is even or odd
+- if else if ---> display if number is 0, positive, negative or not a number
+- display multiple elements if a condition met true-->we can achieve this in two way
+  - wrapping those element in another div tag
+  - using template, this one is recomended as it will not introduce additional unnecessary div tag. 
 ## Style
 ## Event
 - click
