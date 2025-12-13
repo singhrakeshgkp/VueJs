@@ -34,11 +34,12 @@
 
 ## Conditional rendering
 #### file name 02-conditional-rendering-ex1.html
-- if else  --> task is to display given num is even or odd
-- if else if ---> display if number is 0, positive, negative or not a number
-- display multiple elements if a condition met true-->we can achieve this in two way
+- **if else**  --> task is to display given num is even or odd
+- **if else if** ---> display if number is 0, positive, negative or not a number
+- **display multiple elements if a condition met true**-->we can achieve this in two way
   - wrapping those element in another div tag
-  - using template, this one is recomended as it will not introduce additional unnecessary div tag. 
+  - using template, this one is recomended as it will not introduce additional unnecessary div tag.
+- v-show ---> used to show or hide elements (internally it uses display: nons css prop). the diff between v-if and v-show is v-if element will not be present  in DOM if condition does not meet, however element with v-show will be present in DOM with display:none prop.
 ## Style
 ## Event
 - click
