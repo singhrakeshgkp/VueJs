@@ -42,9 +42,26 @@
 - **v-show** ---> used to show or hide elements (internally it uses display: nons css prop). the diff between v-if and v-show is v-if element will not be present  in DOM if condition does not meet, however element with v-show will be present in DOM with display:none prop.
 
 ## List Rendering
-### Fine name 03-list-rendering-ex1.html
-- display an array
-- 
+- List Rendering without key
+- List Rendering with key
+- List Rendering with index
+- Rendering List of Objects
+- Iterate through object props for example i have opject empInfo with props name, age. display name and age using v-for
+### File name 03-list-rendering-ex1.html
+- List Rendering without key
+- List Rendering with key prop
+- List Rendering with index
+- Rendering List of Objects
+- Iterate through Object Props
+- Conditional List Rendering using template
+
+## Methods
+#### Using Options API (Vue 2 & Vue 3)
+- Methods go inside methods: {}
+- Access data using this
+- Call methods in template without ()
+#### Using Composition API (setup) – Recommended in Vue 3
+### Async methods (both APIs)
 ## Style
 ## Event
 - click
