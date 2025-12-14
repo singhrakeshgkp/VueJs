@@ -65,9 +65,11 @@
 
 
 ## Event
+- Event syntax ```v-on:click``` or ```@click```
 - Inline Event handler :- Change name when anyone click on button
 - Inline Event handler :- implement counter
-- Method Event handler :- Change name when anyone click on button---> here in event handler we are logging event, this parameter vue js passes automatically to all no arg methods
+- Method Event handler :- Change name when anyone click on button
+   -  here in event handler we are logging event, this parameter vue js passes automatically to all no arg methods
 
 ## Data binding
 - two way binding
