@@ -62,10 +62,12 @@
 - Call methods in template without ()
 #### Using Composition API (setup) – Recommended in Vue 3
 ### Async methods (both APIs)
-## Style
+
+
 ## Event
-- click
-- event modifier
+- Inline Event handler :- Change name when anyone click on button
+- Inline Event handler :- implement counter
+- Method Event handler :- Change name when anyone click on button---> here in event handler we are logging event, this parameter vue js passes automatically to all no arg methods
 
 ## Data binding
 - two way binding
