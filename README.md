@@ -70,6 +70,10 @@
 - Inline Event handler :- implement counter
 - Method Event handler :- Change name when anyone click on button
    -  here in event handler we are logging event, this parameter vue js passes automatically to all no arg methods
+- Method Event handler :- implement counter and log event
+- Method Event handler :- calling multiple method on button click, in this case we have to pass event to no-arg method as well, if we want to log it.
+
+## Form Handling
 
 ## Data binding
 - two way binding
