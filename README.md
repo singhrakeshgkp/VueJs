@@ -31,6 +31,8 @@
 - **v-once**--> display variable content only once, even if variable value gets change dynamically that change will not refelect on the DOM where its applied.
 - **v-bind**/ : --> bind variale (variable having url as content) to the element. v-bind shorthand is :(colon), we can bind inline css, css class....etc
 - **v-show**--> to show or hide
+- **v-once**
+- **v-pre**
 
 ## Conditional rendering
 #### File name 02-conditional-rendering-ex1.html
