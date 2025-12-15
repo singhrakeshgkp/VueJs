@@ -3,9 +3,11 @@
   - [Creating first project](#creating-first-project)
   - [Ref vs Reactive](#ref-vs-reactive)
   - [Directive](#directive)
-  - [Style](#style)
+  - [Conditional Rendering](#Conditional-Rendering)
+  - [List Rendering](#List-Rendering)
+  - [Methods](#Methods)
   - [Event](#event)
-  - [Data binding](#data-binding)
+  - [Form Handling](#Form-Handling)
 
 ## Creating first project
 - run command ```npm create vite@latest vue-proj1``` and then select Vue frameworks and finally select java script.
@@ -25,7 +27,7 @@
   employees=ref({name:'rakesh'})  employees[0].value.name    this way we can access ref object
   ```
 
-## Directive (binding)
+## Directive
 #### File name 01-directive-ex1.html
 - **v-html**--> transform in html. 
 - **v-once**--> display variable content only once, even if variable value gets change dynamically that change will not refelect on the DOM where its applied.
@@ -34,7 +36,7 @@
 - **v-once**
 - **v-pre**
 
-## Conditional rendering
+## Conditional Rendering
 #### File name 02-conditional-rendering-ex1.html
 - **if else**  --> task is to display given num is even or odd
 - **if else if** ---> display if number is 0, positive, negative or not a number
@@ -87,5 +89,7 @@
   - prevent-->prevent page from refreshing when any one click on submit
   - lazy---> when we start typing it vue js will bind data it appears that binding is happening live, if we want binding happens after focus out of input we can use this modifier.
   - enter--> Lets say if we want to submit form on pressing Enter button of salary field we can comment submit button and specify ```@keyup.enter="submitForm"``` in the targeted field
+
+  ## Computed Properties
   
 
