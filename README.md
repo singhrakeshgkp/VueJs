@@ -79,12 +79,11 @@
 #### simple registration form File Name 06-form-handling-ex1.html
 - Uses v-model for two way data binding, if we selet check box and check and uncheck it by default true/false value will be saved. If we want to check it we need to add true-value='Y' false-value= 'N' we can store this way.
 #### Modifiers
-- Kind of suffix we can add to either v-on or v-model directive to add some functionality inline within template for example lets say if any one enters space in  start and end of some text, we might want to  trim those white spaces that we can do with modifiers. Helps to write cleaner code.
+- Kind of suffix we can add to either v-on or v-model directive to add some functionality inline within template . Helps to write cleaner code, below are few modifiers.
+  - trim---> trim spaces.
+  - number--> Lets say if we have salary field, by default java script will store it in string, if we want it to be stored in number we can use this modifier
+  - prevent-->prevent page from refreshing when any one click on submit
+  - lazy---> when we start typing it vue js will bind data it appears that binding is happening live, if we want binding happens after focus out of input we can use this modifier.
+  - enter--> Lets say if we want to submit form on pressing Enter button of salary field we can comment submit button and specify ```@keyup.enter="submitForm"``` in the targeted field
   
-#### Data binding
-- two way binding
-- model modifier
-   - v-model -->used for binding
-   - v-model.trim---> if used with input, it will remove all spaces from text box.
-   - v-model.lazy---> will apply binding changes once focus is out. for ex if we are typing in text box and deplaying that value in <p> tag, changes in p tag will happens once focus is out from input box
-   - v-model.number---> make sure we are typing number
+
