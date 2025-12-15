@@ -103,6 +103,16 @@
 ### Computed Property Get And Set example
 
 ## Watchers
-- 
+#### File Name = 08-watchers-ex1.html
+- Allow u to watch any data or computed property and execute some code in response to changes in the vue. Example implemnet speed warning system.
+#### Watchers vs computed peropery
+- can i use watchers instead of computed property? Ans is yes, watchers simply provides a more generic way to react to data changes but its not recommended to mimic computed property to watchers.
+- **use computed property** ->
+  - when u need to compose new data from existing data source.
+  - You need to reduce length of a variable.
+- **use watchers**
+  - you have to check if a property has changed to a favorable value to know if u are ready to perform an action
+  - you want to call an http api in response to change in application data.
+  - you have to apply transition.
   
 
