@@ -79,7 +79,7 @@
 #### simple registration form File Name 06-form-handling-ex1.html
 - Uses v-model for two way data binding, if we selet check box and check and uncheck it by default true/false value will be saved. If we want to check it we need to add true-value='Y' false-value= 'N' we can store this way.
 #### Modifiers
-- Kind of suffix we can add to either v-on or v-model directive to add some functionality inline within template for example lets say if any one enters space in  start and end of some text, we might want to  trim those white spaces that we can do with modifiers.
+- Kind of suffix we can add to either v-on or v-model directive to add some functionality inline within template for example lets say if any one enters space in  start and end of some text, we might want to  trim those white spaces that we can do with modifiers. Helps to write cleaner code.
   
 #### Data binding
 - two way binding
