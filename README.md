@@ -8,6 +8,7 @@
   - [Methods](#Methods)
   - [Event](#event)
   - [Form Handling](#Form-Handling)
+  - [Computed Properties](#Computed-Properties)
 
 ## Creating first project
 - run command ```npm create vite@latest vue-proj1``` and then select Vue frameworks and finally select java script.
@@ -91,5 +92,12 @@
   - enter--> Lets say if we want to submit form on pressing Enter button of salary field we can comment submit button and specify ```@keyup.enter="submitForm"``` in the targeted field
 
   ## Computed Properties
+  #### File Name :- 07-computed-properties-ex1.html
+  - Properties that can be bound to the template like data properties. They are used for composing new data from existing source. They are high performant as they are cached calculations which only updates when their dependencies change
+ #### Difference between computed property vs methods
+ - To understand difference lets some log in computedPropery and method
+ - Run server
+ - click on add item, u will observe log from both computed propery and method will be printed, as here computed property has dependency on item and its getting changed so it is being called.
+ - Now try to input some value, lets say if i type rakesh, 6 times method will be called and 0 times computed property.
   
 
