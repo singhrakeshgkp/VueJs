@@ -26,14 +26,14 @@
   ```
 
 ## Directive (binding)
-#### file name 01-directive-ex1.html
+#### File name 01-directive-ex1.html
 - **v-html**--> transform in html. 
 - **v-once**--> display variable content only once, even if variable value gets change dynamically that change will not refelect on the DOM where its applied.
 - **v-bind**/ : --> bind variale (variable having url as content) to the element. v-bind shorthand is :(colon), we can bind inline css, css class....etc
 - **v-show**--> to show or hide
 
 ## Conditional rendering
-#### file name 02-conditional-rendering-ex1.html
+#### File name 02-conditional-rendering-ex1.html
 - **if else**  --> task is to display given num is even or odd
 - **if else if** ---> display if number is 0, positive, negative or not a number
 - **display multiple elements if a condition met true**-->we can achieve this in two way
@@ -42,12 +42,12 @@
 - **v-show** ---> used to show or hide elements (internally it uses display: nons css prop). the diff between v-if and v-show is v-if element will not be present  in DOM if condition does not meet, however element with v-show will be present in DOM with display:none prop.
 
 ## List Rendering
+#### File Name 03-list-rendering-ex1.html
 - List Rendering without key
 - List Rendering with key
 - List Rendering with index
 - Rendering List of Objects
 - Iterate through object props for example i have opject empInfo with props name, age. display name and age using v-for
-### File name 03-list-rendering-ex1.html
 - List Rendering without key
 - List Rendering with key prop
 - List Rendering with index
@@ -57,6 +57,7 @@
 
 ## Methods
 #### Using Options API (Vue 2 & Vue 3)
+#### File Name 04-method-ex1.html
 - Methods go inside methods: {}
 - Access data using this
 - Call methods in template without ()
@@ -65,6 +66,7 @@
 
 
 ## Event
+#### File Name 05-event-ex1.html
 - Event syntax ```v-on:click``` or ```@click```
 - Inline Event handler :- Change name when anyone click on button
 - Inline Event handler :- implement counter
@@ -74,8 +76,12 @@
 - Method Event handler :- calling multiple method on button click, in this case we have to pass event to no-arg method as well, if we want to log it.
 
 ## Form Handling
-
-## Data binding
+#### simple registration form File Name 06-form-handling-ex1.html
+- Uses v-model for two way data binding, if we selet check box and check and uncheck it by default true/false value will be saved. If we want to check it we need to add true-value='Y' false-value= 'N' we can store this way.
+#### Modifiers
+- Kind of suffix we can add to either v-on or v-model directive to add some functionality inline within template for example lets say if any one enters space in  start and end of some text, we might want to  trim those white spaces that we can do with modifiers.
+  
+#### Data binding
 - two way binding
 - model modifier
    - v-model -->used for binding
