@@ -94,10 +94,15 @@
   ## Computed Properties
   #### File Name :- 07-computed-properties-ex1.html
   - Properties that can be bound to the template like data properties. They are used for composing new data from existing source. They are high performant as they are cached calculations which only updates when their dependencies change
- #### Difference between computed property vs methods
- - To understand difference lets some log in computedPropery and method
+ #### computed property vs methods
+ - To understand difference lets add some log in computedPropery and method
  - Run server
  - click on add item, u will observe log from both computed propery and method will be printed, as here computed property has dependency on item and its getting changed so it is being called.
  - Now try to input some value, lets say if i type rakesh, 6 times method will be called and 0 times computed property.
+#### Computed Property vs V-For
+### Computed Property Get And Set example
+
+## Watchers
+- 
   
 
