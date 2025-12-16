@@ -9,6 +9,7 @@
   - [Event](#event)
   - [Form Handling](#Form-Handling)
   - [Computed Properties](#Computed-Properties)
+  - [Component](#component)
 
 ## Creating first project
 - run command ```npm create vite@latest vue-proj1``` and then select Vue frameworks and finally select java script.
@@ -114,5 +115,9 @@
   - you have to check if a property has changed to a favorable value to know if u are ready to perform an action
   - you want to call an http api in response to change in application data.
   - you have to apply transition.
-  
+
+#### Calling watchers when page gets loaded
+#### Calling watchers on object type (by default watchers does not watch changes in deeply nested property, to get rid of this used deep: true property)
+- **File Name** --> For above two use case check file name ```08-watchers-ex2.html```
+## Component
 
