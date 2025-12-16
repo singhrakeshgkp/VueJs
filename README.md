@@ -11,6 +11,9 @@
   - [Computed Properties](#Computed-Properties)
   - [Component](#component)
 
+## Extensions to install
+- Vue VSCode Snippets by sarah
+- Vue official
 ## Creating first project
 - run command ```npm create vite@latest vue-proj1``` and then select Vue frameworks and finally select java script.
 - to run project go to project root directory and run following commands
