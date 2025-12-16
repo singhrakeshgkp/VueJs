@@ -120,4 +120,7 @@
 #### Calling watchers on object type (by default watchers does not watch changes in deeply nested property, to get rid of this used deep: true property)
 - **File Name** --> For above two use case check file name ```08-watchers-ex2.html```
 ## Component
+### Greet
+- crate new project using vite.
+- 
 
