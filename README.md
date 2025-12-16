@@ -1,5 +1,7 @@
 # VueJs
 - Basic
+  - [Extensions to install](#Extensions-to-install)
+  - [Shortcuts](#Shortcuts) 
   - [Creating first project](#creating-first-project)
   - [Ref vs Reactive](#ref-vs-reactive)
   - [Directive](#directive)
@@ -14,6 +16,9 @@
 ## Extensions to install
 - Vue VSCode Snippets by sarah
 - Vue official
+## Shortcuts
+- vbase-css --> create script, style and template tag, this is basic template required in vue.js
+- 
 ## Creating first project
 - run command ```npm create vite@latest vue-proj1``` and then select Vue frameworks and finally select java script.
 - to run project go to project root directory and run following commands
@@ -123,8 +128,15 @@
 #### Calling watchers on object type (by default watchers does not watch changes in deeply nested property, to get rid of this used deep: true property)
 - **File Name** --> For above two use case check file name ```08-watchers-ex2.html```
 ## Component
-### Greet
+### Greet component
 - crate new project using vite.
 - create /component/GreetComp.vue file and export it
 - imported exported component in app.vue file, and use it.
-
+### Component props
+- create new component /component/GreetCompWithProp.vue
+- import and use this component in app.vue file.
+### Props type, validation and default value
+- create new component /component/product.vue
+- we have defined productName of type String, productPrice of type Number if from app.vue file we pass price without v-bind ```:productPrice```, on console vue will show some warning.
+- Similarily if we do not pass productName, since its required no matter v-bind is present or not it will give some warning. Just for FYI warning type related warning may not come for String as by default we passes each field value as string.
+- We can aslo pass default value example for field exclusive we are passing default value to true.
