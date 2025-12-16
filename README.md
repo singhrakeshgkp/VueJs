@@ -165,3 +165,11 @@
   - Create popup.vue file
   - Emit event from popup.vue to app.vue component
   - Bind the custom event using event binding property and assign handler to it. This is how we binded close event ```<Popup v-show="showPopup" @close="showPopup = false"></Popup>```
+  - Now when emiting close event lets say i want to pass some object may be customerName in that case we need to define closePopup method in app.vue ```<Popup v-show="showPopup" @close="closePoup"></Popup>```
+- **Validate Emitted Event**
+   - create new file ```PopupEx2.vue```
+   - write validation logic on it, now verrify log in console, u will see warning if ayoone click on close without enterring any value in input field.
+ 
+### Component and v-model
+#### Branch name 01-component-03
+
