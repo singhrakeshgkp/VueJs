@@ -140,3 +140,11 @@
 - we have defined productName of type String, productPrice of type Number if from app.vue file we pass price without v-bind ```:productPrice```, on console vue will show some warning.
 - Similarily if we do not pass productName, since its required no matter v-bind is present or not it will give some warning. Just for FYI warning type related warning may not come for String as by default we passes each field value as string.
 - We can aslo pass default value example for field exclusive we are passing default value to true.
+
+### Non Prop Attributes
+- In Vue, non-prop attributes are attributes passed to a component that are NOT declared as props in that component.They are still valid and automatically applied to the component’s root element ex, id, class and style attributes
+- Create new component /component/NonPropCompExample.vue.
+- Pass id from app.vue file, inspect and check element u will see what ever id we have added it got added to the root node of our component. If we comment root div/element in that case i would not be add to any of the element this is default behavior.
+- If we want vue apply non prod attribute to specific element for that we can use ```v-bind="$attrs"
+- Now it will add in both parent/root and the element you selected to add, if we do not want vuejs add to parent we can use ```inheritAttrs: false ``` in NonPropCompExample.vue file.
+-  
