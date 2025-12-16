@@ -127,7 +127,11 @@
 #### Calling watchers when page gets loaded
 #### Calling watchers on object type (by default watchers does not watch changes in deeply nested property, to get rid of this used deep: true property)
 - **File Name** --> For above two use case check file name ```08-watchers-ex2.html```
+
+
 ## Component
+
+### Branch 01-component-01
 ### Greet component
 - crate new project using vite.
 - create /component/GreetComp.vue file and export it
@@ -147,4 +151,8 @@
 - Pass id from app.vue file, inspect and check element u will see what ever id we have added it got added to the root node of our component. If we comment root div/element in that case i would not be add to any of the element this is default behavior.
 - If we want vue apply non prod attribute to specific element for that we can use ```v-bind="$attrs"
 - Now it will add in both parent/root and the element you selected to add, if we do not want vuejs add to parent we can use ```inheritAttrs: false ``` in NonPropCompExample.vue file.
--  
+
+### Provide/Inject 
+#### Branch 01-component-02
+- **Definition :-** In Vue, provide / inject is a mechanism to share data or functions across components without passing props through every level (avoids prop drilling).
+- Lets say we have A,B,C,D,E and F components components organized like A, B---have child-->D, C--->E---->F. Lets say i want to display Customer Name to A, D, and F component. To display customer name in nested component we can pass down it as prop but its not an ideal approach, to get rid of this (passing prop every level from C to E and E to F) we can use Provide/Inject this will make data directly available to targeted component.
