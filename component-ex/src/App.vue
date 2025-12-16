@@ -1,17 +1,56 @@
-<script setup>
-import Greet from './components/GreetComp.vue';
-import GreetCompWithProp from './components/GreetCompWithProp.vue';
-import NonPropCompExample from './components/NonPropCompExample.vue';
-import Product from './components/Product.vue';
+<script>
+import CompC from './components/C.vue';
+import Popup from './components/Popup.vue';
+import PopupEx2 from './components/PopupEx2.vue';
+export default {
+  name: 'App',
+  components: {
+    CompC,
+    Popup,
+    PopupEx2
+  },
+  data() {
+    return {
+      custName: 'rakesh singh',
+      showPopup: false,
+      showPopupEx2: false
+    }
+
+  },
+  methods: {
+    closePopup(customerName) {
+      console.log(`customer name is ${customerName}`)
+      this.showPopup = false
+    },
+
+    closePopupEx2(customerName) {
+      console.log(`customer name is ${customerName}`)
+      this.showPopupEx2 = false
+    }
+  },
+  /* provide: {
+    customerName: 'rakesh singh'
+  } */
+  provide() {
+    return {
+      customerName: this.custName
+    }
+  }
+}
 </script>
 
 <template>
-  <Greet></Greet>
-  <GreetCompWithProp empName="Rakesh"></GreetCompWithProp>
-  <GreetCompWithProp empName="Suresh"></GreetCompWithProp>
-  <Product productName="Samsung TV 55 inch" :productPrice="500" :inclusive-all="false"></Product>
-  <NonPropCompExample id="testNonProp" productName="NonPropCompExample" :productPrice="500" :inclusive-all="false">
-  </NonPropCompExample>
+  <h3>Name from Component App {{ custName }}</h3>
+  <CompC></CompC>
+  <h3>Custom Component Example</h3>
+  <hr />
+  <!-- <Popup v-show="showPopup" @close="showPopup = false"></Popup>  if not passing any object -->
+  <Popup v-show="showPopup" @close="closePopup"></Popup>
+  <button @click="showPopup = true">Show Popup</button>
+
+  <PopupEx2 v-show="showPopupEx2" @close="closePopupEx2"></PopupEx2>
+  <button @click="showPopupEx2 = true">Show Popup Ex2</button>
+
 </template>
 
 <style scoped>
