@@ -156,3 +156,12 @@
 #### Branch 01-component-02
 - **Definition :-** In Vue, provide / inject is a mechanism to share data or functions across components without passing props through every level (avoids prop drilling).
 - Lets say we have A,B,C,D,E and F components components organized like A, B---have child-->D, C--->E---->F. Lets say i want to display Customer Name to A, D, and F component. To display customer name in nested component we can pass down it as prop but its not an ideal approach, to get rid of this (passing prop every level from C to E and E to F) we can use Provide/Inject this will make data directly available to targeted component.
+  - Create components C,E,F, organize it as describe above.
+  - add ```provide``` code in app.vue and ```inject``` code in ```F.vue``` file, verify output.  For Component F it will be able to rennder name what if we want customer name gets desplay on App.vue file as well for that we need to change ```provide``` from state to ```provide()``` object
+ 
+
+### Custom component Events
+- Lets say we have a popup.vue component with some content and close button in it, in app.vue component we have button to show popup and i want when anyone click on close button of popup.vue component, popup should be closed.
+  - Create popup.vue file
+  - Emit event from popup.vue to app.vue component
+  - Bind the custom event using event binding property and assign handler to it. This is how we binded close event ```<Popup v-show="showPopup" @close="showPopup = false"></Popup>```
