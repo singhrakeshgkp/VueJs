@@ -1,65 +1,44 @@
 <script>
-import Input from './components/Input.vue';
-import SlotEx from './components/SlotEx.vue';
-import SlotEx2 from './components/SlotEx2.vue';
-import TechStack from './components/TechStack.vue';
+import CompA from './components/CompA.vue';
+import CompB from './components/CompB.vue';
+import CompC from './components/CompC.vue';
+
+
 
 export default {
   name: 'App',
   components: {
-    Input,
-    SlotEx,
-    SlotEx2,
-    TechStack
+    CompA,
+    CompB,
+    CompC
   },
   data() {
     return {
-      customerName: ''
+      activeTab: 'CompA'
     }
 
   },
   methods: {
-  },
+  }
 }
 </script>
 
 <template>
-  <Input v-model="customerName"></Input><br /><br />
-  <SlotEx>My First Test Content</SlotEx>
-  <SlotEx>
-    <h3>My Second Test Content</h3>
-  </SlotEx>
 
+  <button @click="activeTab = 'CompA'">Component A</button>
+  <button @click="activeTab = 'CompB'">Component B</button>
+  <button @click="activeTab = 'CompC'">Component C</button>
 
-  <h1>Multiple Slots in same file/ Named Slot Example</h1>
-  <hr />
-  <SlotEx2>
-    <template v-slot:header>
-      <h2>Header</h2>
-    </template>
+  <!--   <CompA v-if="activeTab === 'CompA'"></CompA>
+  <CompB v-if="activeTab === 'CompB'"></CompB>
+  <CompC v-if="activeTab === 'CompC'"></CompC> -->
 
-    <template v-slot:default>
-      <h2>Main</h2>
-    </template>
+  <!-- above approach is not efficient way, what if we have more than 100 link or nav we have to add 100 if, use following approach -->
+  <!-- <component :is="activeTab"></component>  First example without cache-->
 
-    <template v-slot:footer>
-      <h2>Footer</h2>
-    </template>
-  </SlotEx2>
-
-  <h3>Slots With Prop </h3>
-  <hr />
-  <TechStack>
-    <template v-slot:default="slotProps">
-      {{ slotProps.framework }} {{ slotProps.language }}
-    </template>
-  </TechStack>
-
-  <TechStack>
-    <template v-slot:default="slotProps">
-      {{ slotProps.language }}
-    </template>
-  </TechStack>
+  <KeepAlive>
+    <component :is="activeTab"></component>
+  </KeepAlive>
 </template>
 
 <style scoped>
