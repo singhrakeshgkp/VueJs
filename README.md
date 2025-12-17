@@ -172,4 +172,17 @@
  
 ### Component and v-model
 #### Branch name 01-component-03
+- Task--> create new custom input component, for example Input.vue. bind it with app component property(customer name).
+   - Create Input.vue, bind it in app component using v-model without emit
+   - Download vue dev tool chrome extension, inspect click on vue, it willl show component and its respective property.
+   - now start typing in input box, u will observe customerName in inspected window will not change, to get rid of this write emiting logic in Input.vue and validate again.
+ 
+### Slots
+- **Definition** In Vue, slots are a way to let a parent component pass HTML content (markup) into a child component, while the child controls where that content is rendered. Think of slots as placeholders for content.
+- **Task1**--> create a child component and pass html data/content to it from app.vue file
+  - Create new file /components/SlotEx.vue
+  - Add SlotEx.vue , pass html content and verify output.
+- **Task 2** --> what if we have multiple slots in same file lets say file name is ```SlotEx2.vue``` and lets say there are header, footer and default slot, pass html content to all these respective slots
+   - Create new component /components/SlotEx2.vue, define three slot.
+   - Modify app.vue file, here we used attribute v-slot:<slot name> to identify to which slot content will go.
 
