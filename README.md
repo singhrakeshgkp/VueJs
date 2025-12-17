@@ -179,10 +179,13 @@
  
 ### Slots
 - **Definition** In Vue, slots are a way to let a parent component pass HTML content (markup) into a child component, while the child controls where that content is rendered. Think of slots as placeholders for content.
-- **Task1**--> create a child component and pass html data/content to it from app.vue file
+- **Task1 single slot example**--> create a child component and pass html data/content to it from app.vue file
   - Create new file /components/SlotEx.vue
   - Add SlotEx.vue , pass html content and verify output.
-- **Task 2** --> what if we have multiple slots in same file lets say file name is ```SlotEx2.vue``` and lets say there are header, footer and default slot, pass html content to all these respective slots
+- **Task 2 multiple slots in same file** --> what if we have multiple slots in same file lets say file name is ```SlotEx2.vue``` and lets say there are header, footer and default slot, pass html content to all these respective slots
    - Create new component /components/SlotEx2.vue, define three slot.
    - Modify app.vue file, here we used attribute v-slot:<slot name> to identify to which slot content will go.
-
+- **Task 3, slot props**---> Display list of languate and framework defined in one object, make sure parent component is able to control the rendering logic
+  - 1---> i whould be able to dispaly both language and framework
+  - 2--> I should be able to display either framewor or language only
+- **Solution**--> Create new file ```/components/TechStack.vue```, include this component in app.vue file. Note--> by default vuejs passess slotProps use this props to render/replace slot content with actual content.
