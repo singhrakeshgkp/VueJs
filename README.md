@@ -189,3 +189,14 @@
   - 1---> i whould be able to dispaly both language and framework
   - 2--> I should be able to display either framewor or language only
 - **Solution**--> Create new file ```/components/TechStack.vue```, include this component in app.vue file. Note--> by default vuejs passess slotProps use this props to render/replace slot content with actual content.
+
+### Components style
+- by default components styles applied globally in components tree, ex. if u have Two component app.vue and CompA.vue if u are applying text color of h3 in any of file changes will reflect in both component.
+- in case of conflict that is if in parent component we are setting h3 color as red and in child we are setting green, it might display red as parent component is last one which got evaluated
+- To avoid above issue we can use ```<style scoped>```. With scoped attribute as well we can not restrict leaking of style from parent to child if its root node in child
+- When using slots, the parent component style are applied not child one
+
+
+### Dynamic Component
+- **Task**--> Render component dynamically
+- **solution**--> Create three component CompA, CompB, and CompC. in app.vue file use ```<Component :is="component name">``` here we have used Component control with ```is``` attribute. In ```is``` attribute we have specified component name we want to display.
