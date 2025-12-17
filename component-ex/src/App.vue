@@ -1,56 +1,65 @@
 <script>
-import CompC from './components/C.vue';
-import Popup from './components/Popup.vue';
-import PopupEx2 from './components/PopupEx2.vue';
+import Input from './components/Input.vue';
+import SlotEx from './components/SlotEx.vue';
+import SlotEx2 from './components/SlotEx2.vue';
+import TechStack from './components/TechStack.vue';
+
 export default {
   name: 'App',
   components: {
-    CompC,
-    Popup,
-    PopupEx2
+    Input,
+    SlotEx,
+    SlotEx2,
+    TechStack
   },
   data() {
     return {
-      custName: 'rakesh singh',
-      showPopup: false,
-      showPopupEx2: false
+      customerName: ''
     }
 
   },
   methods: {
-    closePopup(customerName) {
-      console.log(`customer name is ${customerName}`)
-      this.showPopup = false
-    },
-
-    closePopupEx2(customerName) {
-      console.log(`customer name is ${customerName}`)
-      this.showPopupEx2 = false
-    }
   },
-  /* provide: {
-    customerName: 'rakesh singh'
-  } */
-  provide() {
-    return {
-      customerName: this.custName
-    }
-  }
 }
 </script>
 
 <template>
-  <h3>Name from Component App {{ custName }}</h3>
-  <CompC></CompC>
-  <h3>Custom Component Example</h3>
+  <Input v-model="customerName"></Input><br /><br />
+  <SlotEx>My First Test Content</SlotEx>
+  <SlotEx>
+    <h3>My Second Test Content</h3>
+  </SlotEx>
+
+
+  <h1>Multiple Slots in same file/ Named Slot Example</h1>
   <hr />
-  <!-- <Popup v-show="showPopup" @close="showPopup = false"></Popup>  if not passing any object -->
-  <Popup v-show="showPopup" @close="closePopup"></Popup>
-  <button @click="showPopup = true">Show Popup</button>
+  <SlotEx2>
+    <template v-slot:header>
+      <h2>Header</h2>
+    </template>
 
-  <PopupEx2 v-show="showPopupEx2" @close="closePopupEx2"></PopupEx2>
-  <button @click="showPopupEx2 = true">Show Popup Ex2</button>
+    <template v-slot:default>
+      <h2>Main</h2>
+    </template>
 
+    <template v-slot:footer>
+      <h2>Footer</h2>
+    </template>
+  </SlotEx2>
+
+  <h3>Slots With Prop </h3>
+  <hr />
+  <TechStack>
+    <template v-slot:default="slotProps">
+      {{ slotProps.framework }} {{ slotProps.language }}
+    </template>
+  </TechStack>
+
+  <TechStack>
+    <template v-slot:default="slotProps">
+      {{ slotProps.language }}
+    </template>
+  </TechStack>
 </template>
 
 <style scoped>
