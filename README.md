@@ -216,11 +216,25 @@
  ## HTTP
  ### Branch Name 01-component-05
  - To make http request we will use third party library, axios is one of them from vs code terminal run ```npm add axios``` command to add it
+ - Create a PostList.vue component, render and verify it.
  ## Component Lifecycle Hooks
  - Lifecycle hooks in Vue are special functions that allow you to run your own code at specific stages during a component's life, such as when it is created, added to the DOM, updated, or removed. **A vue can go through 4 phases methos name given in front of each phase**
    - **creation** --> ```beforeCreate(), created()```
    - **mounting**--> ```beforeMount(), mounted()```
    - **updating**--> ```beforeUpdate(), updated()```
    - **unmounting**--> ```beforeUnmount(), unmounted()```
- 
+   - **Others**--> ```activated(), deactivated(), errorCaptured(), renderTracked(), renderTriggered()```
+ - **Understand order of execution** ->
+    - Create parent and child component, define above methos log some data in each method. run and check console to understand execution order.
 
+### Now Make GetPosts Call on page load insted of button click
+- Create component PostListOnPageLoad.vue, write required logic to get posts
+- Include above component in app.vue and verify output.
+
+## Template Ref
+- **Task**--> create a component, on page load make focus on in input field defined in created component.
+- **Solution**
+  - Create new component ```TemplateRef.vue```, add input field in  it. Use ref attributes in intput type, ref is an attribute in vue which used to register a reference to an html element.
+  -  Now create mounted lifecycle hook and write logic to focus.
+ 
+## Resuability
