@@ -198,6 +198,7 @@
 
 
 ### Dynamic Component
+#### Branch Name 01-component-04
 - **Task 1**--> Render component dynamically
 - **solution**--> Create three component CompA, CompB, and CompC. in app.vue file use ```<Component :is="component name">``` here we have used Component control with ```is``` attribute. In ```is``` attribute we have specified component name we want to display.
 - **Task 2**--> Lets say i am filling multiple stage form and i am entering data in one page ex component A and moving on another Page/component and coming back to component A u will observe data will what was entered is now not available.
@@ -205,3 +206,21 @@
   - Add inputy type in component A and bind it with about variable.
   - Run and Go to CompA and input some value, now switch to any other component and come back. U will observe data will not be available what was entered as every time we click on any tab vuejs recreate component.
   - To cache the component and retain data surround it with  ```<keep-alive>``` Tag.
+
+### Teleport Component 
+- Used when we want to mount some component in another root (root except app). Perform following step
+  - create a new root node parellel to app, for this modify index.html file.
+  - create new component
+  - add newly created component in app.vue file, sorround it with <Teleport> specify id where we want to mount it.
+
+ ## HTTP
+ ### Branch Name 01-component-05
+ - To make http request we will use third party library, axios is one of them from vs code terminal run ```npm add axios``` command to add it
+ ## Component Lifecycle Hooks
+ - Lifecycle hooks in Vue are special functions that allow you to run your own code at specific stages during a component's life, such as when it is created, added to the DOM, updated, or removed. **A vue can go through 4 phases methos name given in front of each phase**
+   - **creation** --> ```beforeCreate(), created()```
+   - **mounting**--> ```beforeMount(), mounted()```
+   - **updating**--> ```beforeUpdate(), updated()```
+   - **unmounting**--> ```beforeUnmount(), unmounted()```
+ 
+
