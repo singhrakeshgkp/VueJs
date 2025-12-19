@@ -238,3 +238,13 @@
   -  Now create mounted lifecycle hook and write logic to focus.
  
 ## Resuability
+- **Task**---> Implement a counter on mouse click and mouseover, make sure to write logic in one file and use in in multiple component.
+- **Solution**
+  - Create ```MouseClickCounter.vue and MouseoverCounter.vue``` write counter logic in one of file, test it if it works move it to new file Counter.js under any other directory ex /lib.
+  - Now use Counter logic(defined in lib directory) in MouseClickCounter and MouseoverCounter component, verify if both counter is working.
+
+## Composition
+- The Composition API in Vue 3 is a modern approach to writing component logic that emphasizes organizing code by logical concerns (features) rather than by the component's options (data, methods, computed, etc.)
+- So far we have used options api(data(), mehtods, computed properties, watchers, lifecyclehooks)
+- In sort composition is another way to write components in vue.
+  - **Ref in compositon**->  **ref** is a function used to create a reactive and mutable reference to a value, allowing Vue to track changes and automatically update the DOM when the value changes. 
