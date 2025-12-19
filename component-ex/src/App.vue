@@ -1,20 +1,27 @@
 <script>
-import CompA from './components/CompA.vue';
-import CompB from './components/CompB.vue';
-import CompC from './components/CompC.vue';
+import MouseClickCounter from './components/MouseClickCounter.vue';
+import MouseoverCounter from './components/MouseoverCounter.vue';
+import Parent from './components/Parent.vue';
+import PostList from './components/PostList.vue';
+import PostListOnPageLoad from './components/PostListOnPageLoad.vue';
+import TemplateRef from './components/TemplateRef.vue';
+
 
 
 
 export default {
   name: 'App',
   components: {
-    CompA,
-    CompB,
-    CompC
+    PostList,
+    Parent,
+    PostListOnPageLoad,
+    TemplateRef,
+    MouseClickCounter,
+    MouseoverCounter
   },
   data() {
     return {
-      activeTab: 'CompA'
+
     }
 
   },
@@ -25,20 +32,13 @@ export default {
 
 <template>
 
-  <button @click="activeTab = 'CompA'">Component A</button>
-  <button @click="activeTab = 'CompB'">Component B</button>
-  <button @click="activeTab = 'CompC'">Component C</button>
+  <!-- <PostList></PostList> -->
+  <!-- <Parent></Parent>
+  <PostListOnPageLoad></PostListOnPageLoad> -->
+  <!-- <TemplateRef></TemplateRef> -->
+  <MouseClickCounter></MouseClickCounter>
+  <MouseoverCounter></MouseoverCounter>
 
-  <!--   <CompA v-if="activeTab === 'CompA'"></CompA>
-  <CompB v-if="activeTab === 'CompB'"></CompB>
-  <CompC v-if="activeTab === 'CompC'"></CompC> -->
-
-  <!-- above approach is not efficient way, what if we have more than 100 link or nav we have to add 100 if, use following approach -->
-  <!-- <component :is="activeTab"></component>  First example without cache-->
-
-  <KeepAlive>
-    <component :is="activeTab"></component>
-  </KeepAlive>
 </template>
 
 <style scoped>
