@@ -1,19 +1,17 @@
 <script>
-import CompositionEx1 from './components/CompositionEx1.vue';
-import CompositionEx2 from './components/CompositionEx2.vue';
-import CompositionEx3 from './components/CompositionEx3.vue';
-import CompositionEx4 from './components/CompositionEx4.vue';
-import CompositionEx5 from './components/CompositionEx5.vue';
-import CompositionEx6 from './components/CompositionEx6.vue';
+import CalculateSum from './components/CalculateSum.vue';
+import ComputedEx from './components/ComputedEx.vue';
+import WatchersEx from './components/WatchersEx.vue';
+import WatchersEx2 from './components/WatchersEx2.vue';
+
+
 export default {
   name: 'App',
   components: {
-    CompositionEx1,
-    CompositionEx2,
-    CompositionEx3,
-    CompositionEx4,
-    CompositionEx5,
-    CompositionEx6
+    CalculateSum,
+    ComputedEx,
+    WatchersEx,
+    WatchersEx2
   },
   data() {
     return {
@@ -27,19 +25,15 @@ export default {
 </script>
 
 <template>
-  <h2>Compositon Render Name using Ref and Option data() api</h2>
+  <h2>Compute Sum </h2>
   <hr />
-  <CompositionEx1></CompositionEx1>
-  <h2>Compostion Render name using reactive</h2>
-  <hr />
-  <CompositionEx2></CompositionEx2>
+  <CalculateSum></CalculateSum>
+  <ComputedEx></ComputedEx>
+  <WatchersEx></WatchersEx>
+  <WatchersEx2></WatchersEx2>
 
-  <h2>Composition - Reactivity and toRefs</h2>
-  <hr />
-  <CompositionEx3></CompositionEx3>
-  <CompositionEx4></CompositionEx4>
-  <CompositionEx5></CompositionEx5>
-  <CompositionEx6></CompositionEx6>
+
+
 </template>
 
 <style scoped>
