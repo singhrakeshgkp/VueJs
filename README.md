@@ -243,8 +243,48 @@
   - Create ```MouseClickCounter.vue and MouseoverCounter.vue``` write counter logic in one of file, test it if it works move it to new file Counter.js under any other directory ex /lib.
   - Now use Counter logic(defined in lib directory) in MouseClickCounter and MouseoverCounter component, verify if both counter is working.
 
-## Composition
+# Composition
 - The Composition API in Vue 3 is a modern approach to writing component logic that emphasizes organizing code by logical concerns (features) rather than by the component's options (data, methods, computed, etc.)
 - So far we have used options api(data(), mehtods, computed properties, watchers, lifecyclehooks)
 - In sort composition is another way to write components in vue.
-  - **Ref in compositon**->  **ref** is a function used to create a reactive and mutable reference to a value, allowing Vue to track changes and automatically update the DOM when the value changes. 
+- **Ref in compositon**->  **ref** is a function used to create a reactive and mutable reference to a value, allowing Vue to track changes and automatically update the DOM when the value changes.
+
+### Branch Name 02-composition-01
+**Task 1** -> Dispaly Full Name (FirstName+LastName)using Option and Composition Both
+- **Solution** -> Create CompositionEx1.vue file, write rendering logic in it, include it in App.vue and verify output.
+- **Task 2** --> Display FullName using reactive (without using .value and ref)
+- **Solution**--> Create new file ```CompositionEx2.vue``` write logic in it and verify output. Following points to remember
+   - Data option what we replaced in this task also uses reactive internally, using reactive we eliminated use of ref and .value .
+   - Best pratices when dealing with primitive type use ref in other cases use reactive.
+ - **Reactivity and toRefs** when we use simple variable(without ref) to store value, vue doesn't know how to react to changes in the value, however if u are using ref it lets vue know about changes and whereever(in our case its name variable) it used has to be updated.
+    - CompositionEx3 -->
+    - CompositionEx3
+    - CompositionEx4
+    - CompositionEx5
+    - CompositionEx6
+
+### Branch Name 02-composition-02
+#### Composition - function (in data option api we were using methods)
+- Create component CalculateSum.vue and write logic to calculate to calculate sum
+#### Composition - Computed
+- Create a component ComputedEx.vue, in this we have used ```computed``` which takes function as argument.
+
+#### Watchers
+- Create a component **WatchersEx.vue**,
+  - **ref way**-> here we have used ```watch``` funtion which takes two argument first one is data source it want to watch and second one is function.
+  - **reactive way**--> refer below section WatchersEx2.vaue
+- **WatchersEx2.vue**:-
+   - **ref way** --> If there are multiple source like FirstName and LastName we can pass them as array ```[firstname,lastName]``` apart from this we can acess oldValues and new Values using inded [0][1]...[n] whille logging.
+   - **reactive way**
+     - approach 1--> if dont want ot access old value, here it will print old and new value same
+     - approach 2--> if u want old value as well
+     - approach 3--> lets say if u have 50 fields in state variable, watchers function will trigger if any changes happens in any field, what if u want it to trigger for only one variable/field ex firstName
+     - approach 4--> Deep watch(for this we will use ```deep:true``` , but issue with this approach is new value and old value will be same)
+     - approach 5--> Deep watch with old and new value.
+       - run ```npm lodash``` command from terminal, we will use it to make deep copy.
+       - use watchers with cloneDeep method
+- We can add third argument ```immediate:true``` if we want watcher executes on page load.
+  
+  
+
+ 
