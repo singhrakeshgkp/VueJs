@@ -286,5 +286,11 @@
 - We can add third argument ```immediate:true``` if we want watcher executes on page load.
   
   
-
- 
+## Replacing provide/inject 
+### 02-composition-03
+- **Task**--> lets say we have ParentComponent-->ChildX-->ChildY-->ChildZ (nested component) want to pass value from parent to ChildZ
+- **Solution**-> Create components(nesting as per task) write logic to provide and inject following scenario
+  - passing constant
+  - passing variable value
+  - passing object
+  - passing click handler. 
