@@ -1,17 +1,12 @@
 <script>
-import CalculateSum from './components/CalculateSum.vue';
-import ComputedEx from './components/ComputedEx.vue';
-import WatchersEx from './components/WatchersEx.vue';
-import WatchersEx2 from './components/WatchersEx2.vue';
+import ParentComp from './components/ParentComp.vue';
+
 
 
 export default {
   name: 'App',
   components: {
-    CalculateSum,
-    ComputedEx,
-    WatchersEx,
-    WatchersEx2
+    ParentComp
   },
   data() {
     return {
@@ -25,15 +20,7 @@ export default {
 </script>
 
 <template>
-  <h2>Compute Sum </h2>
-  <hr />
-  <CalculateSum></CalculateSum>
-  <ComputedEx></ComputedEx>
-  <WatchersEx></WatchersEx>
-  <WatchersEx2></WatchersEx2>
-
-
-
+  <ParentComp></ParentComp>
 </template>
 
 <style scoped>
