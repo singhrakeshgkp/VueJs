@@ -316,11 +316,13 @@
 - **Solution** --> create files ```EventParentComp.vue and EventChildComp.vue``` write logic and emit custom event. run and verify output
 
 ## Resuability with Composition
+### branch 02-composition-04
 - **Task** --> Implement counter on mouseclick and mouseover , make sure to define commmon code in one place and re-use it.
 - **Solution** ->
    - Create ```composables``` folder in src directory.
    - Create a file ```useCounter``` naming convention is to preix your file name with ```use```, define a function in it, make sure function name same as file name. write required logic.
    - Use this function in MouseClickCounter and MouseOverCounter component.
    - if u want to implement counter with initial value and increment steps ex increment by 2 or 3.... we have to change function to accept arguments.
+   - Now if u run and check mouseover and mouseclick counter.  mouseover counter will have intial value as 50 and will be incremented by 5 however mouse click  with initial value 0 and will be incremented by 1
 
 
