@@ -1,63 +1,28 @@
 <template>
     <div>
-        <h1> Parent Component {{ city }}</h1>
-        <hr />
-
-        <h3> --------Parent Component Employee Details:--------
-            <p>Employee ID :- {{ empId }}</p>
-            <p>Employee First Name :- {{ empFirstName }}</p>
-            <p>Employee Last Name :- {{ empLastName }}</p>
-        </h3>
-        <button @click="changeEmpId" style="background-color: lightblue;">Change EmpId</button>
-        <ChildX></ChildX>
-
+        <input type="text" placeholder="First Name" v-model="firstName"></input>
+        <input type="text" placeholder="Last Name" v-model="lastName"></input>
+        <ChildComp :firstName="firstName" :lastName="lastName"></ChildComp>
     </div>
 </template>
 
 <script>
-import { provide, reactive, ref, toRefs } from 'vue';
-import ChildX from './ChildX.vue';
+import { ref } from 'vue';
+import ChildComp from './ChildComp.vue';
+
 export default {
     components: {
-        ChildX
+        ChildComp,
     },
     name: 'ParentComp',
-
     setup() {
-        provide('composition_empCity', 'Gorakhpur india') // provided constant value
-        const empId = ref('001');
-        const state = reactive({
-            empFirstName: 'Rakesh',
-            empLastName: 'Singh'
-        })
-
-        provide('composition_empId', empId);
-        provide('composition_employee', state);
-        function changeEmpId() {
-            empId.value = 'EMP-0010'
-        }
-        provide('composition_changeEmpId', changeEmpId)
+        const firstName = ref('')
+        const lastName = ref('')
         return {
-            empId,
-            ...toRefs(state),
-            changeEmpId
+            firstName,
+            lastName
         }
-
-
-
-    },
-    data() {
-        return {
-            city: 'Gorakhpur'
-        }
-    },
-    provide() {
-        return {
-            empCity: this.city
-        }
-
     }
-
 }
 </script>
 
