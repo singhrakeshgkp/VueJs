@@ -294,3 +294,33 @@
   - passing variable value
   - passing object
   - passing click handler. 
+
+## LifeCycle Hooks with composition api
+### No Code
+- Hooks in Options  -->   1. beforeCreate() 2. created()   3. beforeMount() mounted()   4.beforeUpdate() updated()....so on
+- Hooks in Composition--> 1. not Needed     2. Not Needed  3. onBeforeMount onMounted() 4.onBeforeUpdate() onUpdated()...so on
+
+## Template ref and composition api
+### branch 02-composition-04
+- **Task**--> focus input type when page load
+- **Solution**--> Create ```TemplateRef.vue``` file include in in app.vue and verify output.
+
+## Props with Composition api
+### branch 02-composition-04
+- **Task** --> Send firstName and Last name as prop from parent to child component and display that name on parent component.
+- **Solution** --> Create two files ```ParentComp.vue and ChildComp.vue``` write logic and verify output.
+  
+## Custom Event and Composition API
+### branch 02-composition-04
+- **Task**--> Emit(send) event from child component to parent component.
+- **Solution** --> create files ```EventParentComp.vue and EventChildComp.vue``` write logic and emit custom event. run and verify output
+
+## Resuability with Composition
+- **Task** --> Implement counter on mouseclick and mouseover , make sure to define commmon code in one place and re-use it.
+- **Solution** ->
+   - Create ```composables``` folder in src directory.
+   - Create a file ```useCounter``` naming convention is to preix your file name with ```use```, define a function in it, make sure function name same as file name. write required logic.
+   - Use this function in MouseClickCounter and MouseOverCounter component.
+   - if u want to implement counter with initial value and increment steps ex increment by 2 or 3.... we have to change function to accept arguments.
+
+
