@@ -16,6 +16,8 @@
 ## Extensions to install
 - Vue VSCode Snippets by sarah
 - Vue official
+- Bracket view colorization togler
+- Live server
 ## Shortcuts
 - vbase-css --> create script, style and template tag, this is basic template required in vue.js
 - 
@@ -27,9 +29,7 @@
   npm install
   
   ```
-  - Extensions to use
-     - Bracket view colorization togler
-     - Live server
+
 ## Ref vs Reactive
 - ref we use with primitive type however reactive we use with object. ref we can use with both primitive and object but reactive can not be used with primitive
   ```
