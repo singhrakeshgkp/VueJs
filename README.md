@@ -136,7 +136,7 @@
 ### Greet component
 - crate new project using vite.
 - create /component/GreetComp.vue file and export it
-- imported exported component in app.vue file, and use it.
+- imported component (what you exported component) in app.vue file, and use it.
 ### Component props
 - create new component /component/GreetCompWithProp.vue
 - import and use this component in app.vue file.
