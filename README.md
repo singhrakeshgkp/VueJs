@@ -103,6 +103,7 @@
   ## Computed Properties
   #### File Name :- 07-computed-properties-ex1.html
   - Properties that can be bound to the template like data properties. They are used for composing new data from existing source. They are high performant as they are cached calculations which only updates when their dependencies change
+  - Every time page re-render method gets called, however computed property does not gets called is its dependency is not changing refer ```07-computed-properties-ex2.html```
  #### computed property vs methods
  - To understand difference lets add some log in computedPropery and method
  - Run server
