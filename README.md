@@ -163,6 +163,8 @@
  
 
 ### Custom component Events
+- **In Vue, data flows down (props) and events flow up (emits). A child component shouldn't change the parent's data directly; it should "ask" the parent to do it.**
+
 - Lets say we have a popup.vue component with some content and close button in it, in app.vue component we have button to show popup and i want when anyone click on close button of popup.vue component, popup should be closed.
   - Create popup.vue file
   - Emit event from popup.vue to app.vue component
