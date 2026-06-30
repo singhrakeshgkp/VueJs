@@ -10,6 +10,7 @@
   - [Methods](#Methods)
   - [Event](#event)
   - [Form Handling](#Form-Handling)
+  - [Watchers](#Watchers)
   - [Computed Properties](#Computed-Properties)
   - [Component](#component)
 
@@ -62,19 +63,10 @@
 - List Rendering with index
 - Rendering List of Objects
 - Iterate through object props for example i have opject empInfo with props name, age. display name and age using v-for
-- List Rendering without key
 - List Rendering with key prop
-- List Rendering with index
-- Rendering List of Objects
-- Iterate through Object Props
 - Conditional List Rendering using template
 
 ## Methods
-#### Using Options API (Vue 2 & Vue 3)
-#### File Name 04-method-ex1.html
-- Methods go inside methods: {}
-- Access data using this
-- Call methods in template without ()
 #### Using Composition API (setup) – Recommended in Vue 3
 ### Async methods (both APIs)
 
@@ -100,18 +92,6 @@
   - lazy---> when we start typing it vue js will bind data it appears that binding is happening live, if we want binding happens after focus out of input we can use this modifier.
   - enter--> Lets say if we want to submit form on pressing Enter button of salary field we can comment submit button and specify ```@keyup.enter="submitForm"``` in the targeted field
 
-  ## Computed Properties
-  #### File Name :- 07-computed-properties-ex1.html
-  - Properties that can be bound to the template like data properties. They are used for composing new data from existing source. They are high performant as they are cached calculations which only updates when their dependencies change
-  - Every time page re-render method gets called, however computed property does not gets called is its dependency is not changing refer ```07-computed-properties-ex2.html```
- #### computed property vs methods
- - To understand difference lets add some log in computedPropery and method
- - Run server
- - click on add item, u will observe log from both computed propery and method will be printed, as here computed property has dependency on item and its getting changed so it is being called.
- - Now try to input some value, lets say if i type rakesh, 6 times method will be called and 0 times computed property.
-#### Computed Property vs V-For
-### Computed Property Get And Set example
-
 ## Watchers
 #### File Name = 08-watchers-ex1.html
 - Allow u to watch any data or computed property and execute some code in response to changes in the vue. Example implemnet speed warning system.
@@ -129,6 +109,17 @@
 #### Calling watchers on object type (by default watchers does not watch changes in deeply nested property, to get rid of this used deep: true property)
 - **File Name** --> For above two use case check file name ```08-watchers-ex2.html```
 
+  ## Computed Properties
+  #### File Name :- 07-computed-properties-ex1.html
+  - Properties that can be bound to the template like data properties. They are used for composing new data from existing source. They are high performant as they are cached calculations which only updates when their dependencies change
+  - Every time page re-render method gets called, however computed property does not gets called is its dependency is not changing refer ```07-computed-properties-ex2.html```
+ #### computed property vs methods
+ - To understand difference lets add some log in computedPropery and method
+ - Run server
+ - click on add item, u will observe log from both computed propery and method will be printed, as here computed property has dependency on item and its getting changed so it is being called.
+ - Now try to input some value, lets say if i type rakesh, 6 times method will be called and 0 times computed property.
+#### Computed Property vs V-For
+### Computed Property Get And Set example
 
 ## Component
 
