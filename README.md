@@ -48,7 +48,6 @@
 - **v-pre**
 
 ## Conditional Rendering
-#### File name 02-conditional-rendering-ex1.html
 - **if else**  --> task is to display given num is even or odd
 - **if else if** ---> display if number is 0, positive, negative or not a number
 - **display multiple elements if a condition met true**-->we can achieve this in two way
@@ -57,7 +56,6 @@
 - **v-show** ---> used to show or hide elements (internally it uses display: nons css prop). the diff between v-if and v-show is v-if element will not be present  in DOM if condition does not meet, however element with v-show will be present in DOM with display:none prop.
 
 ## List Rendering
-#### File Name 03-list-rendering-ex1.html
 - List Rendering without key
 - List Rendering with key
 - List Rendering with index
@@ -72,7 +70,6 @@
 
 
 ## Event
-#### File Name 05-event-ex1.html
 - Event syntax ```v-on:click``` or ```@click```
 - Inline Event handler :- Change name when anyone click on button
 - Inline Event handler :- implement counter
@@ -93,7 +90,6 @@
   - enter--> Lets say if we want to submit form on pressing Enter button of salary field we can comment submit button and specify ```@keyup.enter="submitForm"``` in the targeted field
 
 ## Watchers
-#### File Name = 08-watchers-ex1.html
 - Allow u to watch any data or computed property and execute some code in response to changes in the vue. Example implemnet speed warning system.
 #### Watchers vs computed peropery
 - can i use watchers instead of computed property? Ans is yes, watchers simply provides a more generic way to react to data changes but its not recommended to mimic computed property to watchers.
@@ -107,10 +103,9 @@
 
 #### Calling watchers when page gets loaded
 #### Calling watchers on object type (by default watchers does not watch changes in deeply nested property, to get rid of this used deep: true property)
-- **File Name** --> For above two use case check file name ```08-watchers-ex2.html```
 
-  ## Computed Properties
-  #### File Name :- 07-computed-properties-ex1.html
+## Computed Properties
+
   - Properties that can be bound to the template like data properties. They are used for composing new data from existing source. They are high performant as they are cached calculations which only updates when their dependencies change
   - Every time page re-render method gets called, however computed property does not gets called is its dependency is not changing refer ```07-computed-properties-ex2.html```
  #### computed property vs methods
