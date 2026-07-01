@@ -66,13 +66,14 @@
 - Conditional List Rendering using template
 
 # Composition api
-- Script tag with ```setup``` and without it
-  - ```<script setup>``` eliminates the need to export default, define setup(), and use the return statement
-  - ```<script setup>```, imported components and functions can be used in your template immediately. Without it, you must register components manually in a components: {} object
-  - In <script setup>, you use compiler macros like defineProps() and defineEmits()
-  - Without it, you pass props and context as arguments into the setup(props, context) function.
-- 01
-  - FirstComp.vue -----> Dispaly Firstname and last Name
+## Script tag with ```setup``` and without it
+- ```<script setup>``` eliminates the need to export default, define setup(), and use the return statement
+- ```<script setup>```, imported components and functions can be used in your template immediately. Without it, you must register components manually in a components: {} object
+- In <script setup>, you use compiler macros like defineProps() and defineEmits()
+- Without it, you pass props and context as arguments into the setup(props, context) function.
+## 01
+- FirstComp.vue -----> Dispaly Firstname and last Name
+- 
 ## Methods
 #### Using Composition API (setup) – Recommended in Vue 3
 ### Async methods (both APIs)
