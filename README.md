@@ -8,11 +8,13 @@
   - [Conditional Rendering](#Conditional-Rendering)
   - [List Rendering](#List-Rendering)
   - [Composition API](#composition-api)
+    - [Props](#Props)
+    - [Computed Property](#computed-property)
+    - 
   - [Methods](#Methods)
   - [Event](#event)
   - [Form Handling](#Form-Handling)
   - [Watchers](#Watchers)
-  - [Computed Properties](#Computed-Properties)
   - [Component](#component)
 
 ## Extensions to install
@@ -71,9 +73,12 @@
 - ```<script setup>```, imported components and functions can be used in your template immediately. Without it, you must register components manually in a components: {} object
 - In <script setup>, you use compiler macros like defineProps() and defineEmits()
 - Without it, you pass props and context as arguments into the setup(props, context) function.
-## 01
-- FirstComp.vue -----> Dispaly Firstname and last Name
+
+## Props
+## Computed Property
+- ComputedPropEx.vue -----> Dispaly Full Name
 - 
+
 ## Methods
 #### Using Composition API (setup) – Recommended in Vue 3
 ### Async methods (both APIs)
