@@ -1,16 +1,12 @@
 # VueJs
 - Basic
   - [Extensions to install](#Extensions-to-install)
-  - [Shortcuts](#Shortcuts) 
-  - [Creating first project](#creating-first-project)
+  - [Shortcuts](#Shortcuts)
+  - [Composition API](#composition-api)
   - [Ref vs Reactive](#ref-vs-reactive)
   - [Directive](#directive)
   - [Conditional Rendering](#Conditional-Rendering)
   - [List Rendering](#List-Rendering)
-  - [Composition API](#composition-api)
-    - [Props](#Props)
-    - [Computed Property](#computed-property)
-    - 
   - [Methods](#Methods)
   - [Event](#event)
   - [Form Handling](#Form-Handling)
@@ -24,15 +20,13 @@
 - Live server
 ## Shortcuts
 - vbase-css --> create script, style and template tag, this is basic template required in vue.js
-- 
-## Creating first project
-- run command ```npm create vite@latest vue-proj1``` and then select Vue frameworks and finally select java script.
-- to run project go to project root directory and run following commands
-  ```
-  npm install patch-package --save-dev   //Remove the postinstall script run if npm install fails
-  npm install
-  
-  ```
+
+# Composition api
+## Script tag with ```setup``` and without it
+- ```<script setup>``` eliminates the need to export default, define setup(), and use the return statement
+- ```<script setup>```, imported components and functions can be used in your template immediately. Without it, you must register components manually in a components: {} object
+- In <script setup>, you use compiler macros like defineProps() and defineEmits()
+- Without it, you pass props and context as arguments into the setup(props, context) function.
 
 ## Ref vs Reactive
 - ref we use with primitive type however reactive we use with object. ref we can use with both primitive and object but reactive can not be used with primitive
@@ -43,59 +37,27 @@
 
 ## Directive
 #### File name 01-directive-ex1.html
-- **v-html**--> transform in html. 
-- **v-once**--> display variable content only once, even if variable value gets change dynamically that change will not refelect on the DOM where its applied.
-- **v-bind**/ : --> bind variale (variable having url as content) to the element. v-bind shorthand is :(colon), we can bind inline css, css class....etc
-- **v-show**--> to show or hide
-- **v-once**
-- **v-pre**
+
+``` v-html, v-once, v-bind, v-show, v-pre ```
 
 ## Conditional Rendering
-- **if else**  --> task is to display given num is even or odd
-- **if else if** ---> display if number is 0, positive, negative or not a number
-- **display multiple elements if a condition met true**-->we can achieve this in two way
-  - wrapping those element in another div tag
-  - using template, this one is recomended as it will not introduce additional unnecessary div tag.
-- **v-show** ---> used to show or hide elements (internally it uses display: nons css prop). the diff between v-if and v-show is v-if element will not be present  in DOM if condition does not meet, however element with v-show will be present in DOM with display:none prop.
+``` if elsse```
 
 ## List Rendering
-- List Rendering without key
-- List Rendering with key
-- List Rendering with index
-- Rendering List of Objects
+- List Rendering without key, List Rendering with key, List Rendering with index, Rendering List of Objects
 - Iterate through object props for example i have opject empInfo with props name, age. display name and age using v-for
-- List Rendering with key prop
-- Conditional List Rendering using template
-
-# Composition api
-## Script tag with ```setup``` and without it
-- ```<script setup>``` eliminates the need to export default, define setup(), and use the return statement
-- ```<script setup>```, imported components and functions can be used in your template immediately. Without it, you must register components manually in a components: {} object
-- In <script setup>, you use compiler macros like defineProps() and defineEmits()
-- Without it, you pass props and context as arguments into the setup(props, context) function.
+- List Rendering with key prop, Conditional List Rendering using template
 
 ## Props
 ## Computed Property
 - ComputedPropEx.vue -----> Dispaly Full Name
-- 
+
 
 ## Methods
-#### Using Composition API (setup) – Recommended in Vue 3
-### Async methods (both APIs)
-
-
 ## Event
 - Event syntax ```v-on:click``` or ```@click```
-- Inline Event handler :- Change name when anyone click on button
-- Inline Event handler :- implement counter
-- Method Event handler :- Change name when anyone click on button
-   -  here in event handler we are logging event, this parameter vue js passes automatically to all no arg methods
-- Method Event handler :- implement counter and log event
-- Method Event handler :- calling multiple method on button click, in this case we have to pass event to no-arg method as well, if we want to log it.
-
+- 
 ## Form Handling
-#### simple registration form File Name 06-form-handling-ex1.html
-- Uses v-model for two way data binding, if we selet check box and check and uncheck it by default true/false value will be saved. If we want to check it we need to add true-value='Y' false-value= 'N' we can store this way.
 #### Modifiers
 - Kind of suffix we can add to either v-on or v-model directive to add some functionality inline within template . Helps to write cleaner code, below are few modifiers.
   - trim---> trim spaces.
@@ -128,8 +90,6 @@
  - Run server
  - click on add item, u will observe log from both computed propery and method will be printed, as here computed property has dependency on item and its getting changed so it is being called.
  - Now try to input some value, lets say if i type rakesh, 6 times method will be called and 0 times computed property.
-#### Computed Property vs V-For
-### Computed Property Get And Set example
 
 ## Component
 
