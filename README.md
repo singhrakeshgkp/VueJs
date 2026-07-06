@@ -80,3 +80,7 @@
 
 #### Calling watchers when page gets loaded
 #### Calling watchers on object type (by default watchers does not watch changes in deeply nested property, to get rid of this used deep: true property)
+
+
+# Component
+- there are two ways to import component. 1- Globally,we usually do in main.vue. 2- locally
