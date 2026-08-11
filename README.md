@@ -83,4 +83,8 @@
 
 
 # Component
-- there are two ways to import component. 1- Globally,we usually do in main.vue. 2- locally
+- there are three ways to import component.
+  - **Locally ---->** Components are isolated. You import them directly into the file that needs them. If another file needs the same component, it must import it again
+  - **Globally ---->** You register components individually right inside your main application instance. This makes them available everywhere, but it can quickly make your main file massive if you have dozens of components.
+  - **The plugin/install method --->** Instead of cluttering main.js, you create a dedicated JavaScript/TypeScript file that packages your components into a Vue Plugin. Vue plugins expose an install method that hooks directly into the app lifecycle
+  - 
